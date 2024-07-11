@@ -128,9 +128,9 @@
       // 7. sort Exercise
       // Sort the people alphabetically by last name
       const alpha = people.sort((p1, p2) => {
-        const surname1 = p1.substr(0, p1.indexOf(","));
-        const surname2 = p2.substr(0, p2.indexOf(","));
-        return surname1 < surname2 ? -1 : 1;
+        const [surname, forename] = p1.split(" ");
+        const [surname2, forename2] = p2.split(" ");
+        return surname < surname2 ? -1 : 1;
       });
       console.log(alpha);
 
